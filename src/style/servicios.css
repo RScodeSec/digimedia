@@ -1,0 +1,423 @@
+
+@font-face{
+  font-family: 'Poppins';
+  src: url(../fonts/Poppins/Poppins-Medium.ttf),
+      url(../fonts/Poppins/Poppins-Light.ttf),
+      url(../fonts/Poppins/Poppins-Black.ttf),
+      url(../fonts/Poppins/Poppins-BlackItalic.ttf),
+      url(../fonts/Poppins/Poppins-BoldItalic.ttf),
+      url(../fonts/Poppins/Poppins-Bold.ttf),
+      url(../fonts/Poppins/Poppins-ExtraBold.ttf),
+      url(../fonts/Poppins/Poppins-ExtraBoldItalic.ttf),
+      url(../fonts/Poppins/Poppins-ExtraLight.ttf),
+      url(../fonts/Poppins/Poppins-ExtraLightItalic.ttf),
+      url(../fonts/Poppins/Poppins-Italic.ttf),
+      url(../fonts/Poppins/Poppins-LightItalic.ttf),
+      url(../fonts/Poppins/Poppins-MediumItalic.ttf),
+      url(../fonts/Poppins/Poppins-Regular.ttf),
+      url(../fonts/Poppins/Poppins-SemiBold.ttf),
+      url(../fonts/Poppins/Poppins-SemiBoldItalic.ttf),
+      url(../fonts/Poppins/Poppins-Thin.ttf),
+      url(../fonts/Poppins/Poppins-ThinItalic.ttf);
+  font-weight: 300;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+:root {
+    --blanco: #fff;
+    --negro: #000;
+    --gris-claro: #ecebebbd;
+    --gris-oscuro: #d3d2d2bd;
+    --morado-claro: #660066;
+    --morado: #4D0D6E;
+    --azul: #4521D1;
+    --azul-claro: #0066CC;
+    --instagram: #8a3ab9;
+    --twitter: #00acee;
+    --linkedin: #0072b1;
+    --altura: calc(100vh - 80px);
+  }
+  
+  body {
+    width: 100%;
+  }
+
+  .main {
+    width: 100%;
+    padding-top: 40px;
+  }
+  
+  .servicios {
+    background-color: #7fb2e5;
+    margin-bottom: 25px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+  }
+  /*Efectos de titulo de nosotros*/
+  .servicios span {
+    color: #ffff;
+    display: block;
+    font-size: 49px;
+    padding: 0px 10px;
+    font-weight: bold;
+    /* margin-left: 23%; */
+    animation-name: deslizarServicios;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes deslizarServicios {
+    0% {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+
+  .titulo h1 {
+    color:#4d0d6e;
+    font-size: 35px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+  }
+
+  .container{
+    width: 100%;
+    margin: auto;
+    max-width: 1100px;
+    display: grid;
+    grid-template: 1fr / 0.5fr 1fr 1fr 1fr;
+    grid-template-areas: "mark uno dos tres";
+  }
+
+  .mark{
+    grid-area: mark;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #uno {
+    grid-area: uno;
+  }
+
+  #dos {
+    grid-area: dos;
+  }
+
+  #tres {
+    grid-area: tres;
+  }
+
+
+.mark img {
+    margin-top: 20px;
+    height: 417px;
+}
+
+.card{
+    background-color: #3d9be9;
+    margin: 1rem;
+    text-align: center;
+    -webkit-animation: pasos 3s ease;
+    animation: pasos 3s ease;   
+}
+
+@-webkit-keyframes pasos {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes pasos {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.container .card h1 {
+    padding-top: 20px;
+    padding-left: 15px;
+    text-align: left;
+    font-size: 40px;
+    color: #ffffff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.descripcion{
+    padding: 10px;
+}
+.descripcion p {
+    font-weight: bold;
+    font-size: 24px;
+    text-align: initial;
+    color: #ffffff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#paso3 p{
+    font-size: 21px;
+}
+
+
+.section {
+    width: 80%;
+    background-color: var(--gris-claro);
+    margin: auto;
+    position: relative;
+}
+
+.info {
+    padding: 25px 250px;
+    text-align: justify;
+}
+
+.info p {
+    color: var(--morado-claro);
+    line-height: 200%;
+    font-weight: bold;
+    font-size: 24px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    animation-name: revelarInfo;
+    animation-duration: 1.5s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+@keyframes revelarInfo {
+    0% {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+
+.historia__productos {
+    width: 100%;
+    min-height: 230px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.historia__productos .tarjeta {
+    width: 230px;
+    height: 100%;
+    margin: 0 20px;
+}
+
+.historia__productos .tarjeta img {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+input,
+button {
+  font-family: inherit;
+  font-size: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+.my-form{
+    margin-left: 150px;
+    margin-right: 150px;
+    background-color: var(--gris-claro);
+}
+
+.formulario {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 25px;
+  -webkit-animation: form 2s ease;
+    animation: form 2s ease;
+}
+@-webkit-keyframes form {
+    0% {
+        opacity: 0;
+        transform: translateX(20%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes form {
+    0% {
+        opacity: 0;
+        transform: translateX(20%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.my-form h1 {
+  text-align: center;
+  font-size: 45px;
+  color: var(--morado-claro);
+  font-family:  'Gill Sans MT', Calibri,  sans-serif;
+}
+
+.my-form li,
+.my-form .grid > *:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+
+.my-form input {
+  width: 100%;
+  line-height: 1.5;
+  padding: 15px 10px;
+  
+}
+
+.btnEnviar {
+    background-color: var(--azul-claro);
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.my-form ::placeholder {
+  color: inherit;
+  opacity: 1;
+}
+
+.my-form input:focus,
+.my-form button:enabled:hover,
+.my-form button:focus,
+.my-form input[type="checkbox"]:focus + label {
+  background: var(--bgFormElsFocus);
+}
+
+.btn-whatsapp {
+    position: fixed;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    bottom: 30px;
+    right: 30px;
+    background: #0df053;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+    transition: .7s;
+}
+  
+.btn-whatsapp:hover {
+    text-decoration: none;
+    color: #0df053;
+    background: #fff;
+}
+
+@media (max-width: 1020px) {
+    .section {
+        width: 100%;
+    }
+    .my-form{
+        margin-left: 0px;
+        margin-right: 0px;
+        font-size: 15px;
+    }
+    .info {
+        padding: 25px 50px;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .my-form .grid {
+      display: grid;
+      grid-gap: 1.5rem;
+    }
+  
+    .my-form .grid-2 {
+      grid-template-columns: 1fr 1fr;
+    }
+  
+    .my-form .grid-3 {
+      grid-template-columns: auto auto auto;
+      align-items: center;
+    }
+  
+    .my-form .grid > *:not(:last-child) {
+      margin-bottom: 0;
+    }
+  
+    .my-form .required-msg {
+      display: block;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+
+  .container .card h1 {
+    font-size: 3rem;
+  }
+
+  .container .card img {
+    width: 50%;
+  }
+
+  .descripcion{
+    padding: 10px;
+  }
+  .descripcion p {
+    font-size: 1rem;
+  }
+
+  #paso3 p{
+  font-size: 1rem;
+  }
+
+  .mark img {
+    height: 250px;
+  }
+
+  .historia__productos .tarjeta {
+    width: 30%;
+}
+
+.info p {
+  font-size: 2rem;
+}
+
+.my-form h1 {
+  text-align: center;
+  font-size: 3rem;
+  color: var(--morado-claro);
+  font-family: 'Gill Sans MT', Calibri, sans-serif;
+}
+
+}

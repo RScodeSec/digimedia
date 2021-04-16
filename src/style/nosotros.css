@@ -1,0 +1,498 @@
+
+@font-face{
+  font-family: 'Poppins';
+  src: url(../fonts/Poppins/Poppins-Medium.ttf),
+      url(../fonts/Poppins/Poppins-Light.ttf),
+      url(../fonts/Poppins/Poppins-Black.ttf),
+      url(../fonts/Poppins/Poppins-BlackItalic.ttf),
+      url(../fonts/Poppins/Poppins-BoldItalic.ttf),
+      url(../fonts/Poppins/Poppins-Bold.ttf),
+      url(../fonts/Poppins/Poppins-ExtraBold.ttf),
+      url(../fonts/Poppins/Poppins-ExtraBoldItalic.ttf),
+      url(../fonts/Poppins/Poppins-ExtraLight.ttf),
+      url(../fonts/Poppins/Poppins-ExtraLightItalic.ttf),
+      url(../fonts/Poppins/Poppins-Italic.ttf),
+      url(../fonts/Poppins/Poppins-LightItalic.ttf),
+      url(../fonts/Poppins/Poppins-MediumItalic.ttf),
+      url(../fonts/Poppins/Poppins-Regular.ttf),
+      url(../fonts/Poppins/Poppins-SemiBold.ttf),
+      url(../fonts/Poppins/Poppins-SemiBoldItalic.ttf),
+      url(../fonts/Poppins/Poppins-Thin.ttf),
+      url(../fonts/Poppins/Poppins-ThinItalic.ttf);
+  font-weight: 300;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  
+  font-family: 'Poppins', sans-serif;
+}
+:root {
+  --blanco: #fff;
+  --negro: #000;
+  --gris-claro: #ecebebbd;
+  --gris-oscuro: #d3d2d2bd;
+  --morado-claro: #660066;
+  --morado: #4D0D6E;
+  --azul: #4521D1;
+  --azul-claro: #0066CC;
+  --instagram: #8a3ab9;
+  --twitter: #00acee;
+  --linkedin: #0072b1;
+  --altura: calc(100vh - 80px);
+}
+body {
+  height: 100%;
+}
+.contenedor {
+  width: 100%;
+}
+.main {
+  width: 100%;
+  padding-top: 40px;
+  display: grid;
+  grid-template: 0.1fr 1fr 1fr 0.1fr/ 1fr 1fr;
+  grid-template-areas: "nosotros nosotros"
+                      "descripcion grafico"
+                      "estrategia estrategia"
+                      "objetivo objetivo";
+}
+
+.nosotros {
+  background-color: #7fb2e5;
+  overflow: hidden;
+  grid-area: nosotros;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+}
+
+.nosotros p {
+  color: #ffff;
+  display: block;
+  font-size: 49px;
+  padding: 20px 10px;
+  font-weight: bold;
+  animation-name: deslizarNosotros;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes deslizarNosotros {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.descripcion {
+  grid-area: descripcion;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*Efecto de descripcion*/
+ .descripcion-cuerpo p {
+  font-weight:bold;
+  line-height:  1.8;;
+  text-align: justify;
+  color:#4d0d6e;
+  font-size: 1.5rem;
+  animation-name: revelarDescripcion;
+  animation-duration: 1.5s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes revelarDescripcion {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+/*Fin de efecto de descripcion*/
+
+/* Efecto del grafico */
+.grafico {
+  width: 100%;
+  grid-area: grafico;
+  text-align: center;
+  background-repeat: repeat, no-repeat;
+  background-size: cover, cover;
+  background-attachment: fixed, fixed;
+  animation-name: opacityImage;
+  animation-fill-mode: forwards;
+  animation-duration: 3s;
+  animation-timing-function: ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grafico img {
+  width: 100%;
+  animation-name: deslizarlogo;
+  animation-fill-mode: forwards;
+  animation-duration: 3s;
+  animation-timing-function: ease;
+
+}
+
+@keyframes deslizalogo {
+  0% {
+    opacity: 0;
+  }
+  50%{
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Fin del efecto del grafico */
+
+.estrategia{
+  grid-area: estrategia;
+  max-width: 700px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.estrategia-cuerpo{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: inline-block;
+}
+
+/*Efecto del estrategia-cuerpo*/
+#one {
+  margin-top: 50px;
+  border-radius: 20px;
+  width: 500px;
+  float: left;
+  background: #7fb2e5;
+  animation-duration: 1.5s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.efectoEstrategia{
+  animation-name: revelarEstrategia;
+}
+
+@keyframes revelarEstrategia {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+/*Fin del efecto del estrategia-cuerpo*/
+
+.estrategia-titulo{
+  animation-duration: 1.5s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  opacity: 1;
+}
+
+.estrategia-titulo h3 {
+  font-weight:bold;
+  color: #ffffff;
+  font-size: 25px;
+  line-height: 1.8;
+  font-weight:bold;
+  padding-top: 20px;
+  padding-left: 20px;
+  font-size: 25px;
+}
+/*Efecto del estrategia-titulo*/
+.efectoTitulo{
+  animation-name: revelarTitulo;
+}
+
+@keyframes revelarTitulo {
+  0% {
+    opacity: 1;
+    transform: translateX(120%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+/*Fin del efecto del estrategia-titulo*/
+
+.estrategia-lista li {
+  font-weight:bold;
+  font-size: 25px;
+  color: #ffffff;
+  line-height: 1.8;
+}
+
+/*Efecto de estrategia-lista*/
+.estrategia-lista{
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  animation-duration: 1.5s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  opacity: 1;
+}
+
+.efectoLista{
+  animation-name: revelarLista;
+}
+
+@keyframes revelarLista{
+  0% {
+    opacity: 1;
+    transform: translateX(120%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+/*Fin del efecto de estrategia-lista*/
+
+/*Voltear horizontalmente la imagen*/
+.estrategia-cuerpo img {
+  width: 186px;
+  height: 400px;
+  -moz-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
+
+/*Efecto de la  imagen de estrategia*/
+#two {
+  float: left;
+  animation-duration: 1.5s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.efectoImagen {
+  animation-name: deslizarImagen;
+}
+
+@keyframes deslizarImagen {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+/*Fin del efecto de la  imagen de estrategia*/
+
+.objetivo {
+  grid-area: objetivo;
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.objetivo-cuerpo p {
+  font-weight:bold;
+  line-height:  1.8;;
+  text-align: justify;
+  color:#4d0d6e;
+  font-size: 24px;
+  animation-name: revelarObjetivo;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes revelarObjetivo {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.btn-whatsapp {
+  position: fixed;
+  width: 55px;
+  height: 55px;
+  line-height: 55px;
+  bottom: 30px;
+  right: 30px;
+  background: #0df053;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+  transition: .7s;
+}
+
+.btn-whatsapp:hover {
+  text-decoration: none;
+  color: #0df053;
+  background: #fff;
+}
+
+@media (max-width: 1300px){
+  .descripcion{
+    width: 80%;
+  }
+  .objetivo {
+    width: 80%;
+  }
+  .vision {
+    width: 80%;
+  }
+}
+
+@media (max-width: 1020px) {
+  .descripcion{
+    width: 80%;
+  }
+  .objetivo {
+    width: 80%;
+  }
+  .vision {
+    width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .descripcion {
+    width: 80%;
+    padding: 40px 0px;
+  }
+  .objetivo {
+    width: 80%;
+  }
+  .grafico img{
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .main {
+    width: 100%;
+    padding-top: 40px;
+    display: grid;
+    grid-template: 0.1fr 0.5fr 1fr 0.5fr 0.5fr/ 1fr;
+    grid-template-areas: "nosotros"
+                        "descripcion" 
+                        "grafico"
+                        "estrategia"
+                        "objetivo";
+  }
+
+  .nosotros {
+    grid-area: nosotros;
+  }
+
+  .descripcion {
+    grid-area: descripcion;
+  }
+
+  .descripcion-cuerpo p {
+    font-size: 1rem;
+  }
+
+  .grafico {
+    grid-area: grafico;
+  }
+
+  .estrategia{
+    display: grid;
+    width: 100%;
+    grid-area: estrategia;
+    grid-template: 1fr / 2fr 1fr;
+    grid-template-areas: "uno dos";
+  }
+
+  .estrategia-titulo h3 {
+    font-size: 1rem;
+  }
+
+  .estrategia-lista li {
+    font-size: 1rem;
+  }
+
+  .estrategia-cuerpo img {
+    width: 100%;
+    height: auto;
+  }
+
+  #one {
+    align-self: center;
+    width: 100%;
+  }
+  
+  #two {
+    grid-area: dos;
+    align-self: center;
+  }
+
+  .objetivo {
+    grid-area: objetivo;
+  }
+
+  .objetivo-cuerpo p {
+    font-size: 1rem;
+  }
+
+}
+
+@media (max-width: 425px) {
+  .nosotros {
+    width: 100%;
+    text-align: center;
+  }
+  .nosotros span {
+    font-size: 49px;
+    padding: 0px;
+    margin-left: 0px;
+  }
+  .objetivo {
+    width: 80%;
+  }
+  .grafico img{
+    width: 100%;
+  }
+
+}
+
