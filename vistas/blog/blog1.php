@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../../src/style/blogs.css">
     <link rel="stylesheet" href="../../src/style/partials/footer.css">
     <link rel="stylesheet" href="../../src/style/partials/navbar.css">
+    <link rel="stylesheet" href="../../src/style/paginacion.css">
 </head>
 
 <body>
@@ -67,7 +68,25 @@
             <p>Como hemos visto en este artículo, las estrategias de marketing digital te permiten contactar a una gran cantidad de compradores, cerrar varias ventas en el menor tiempo posible y con una inversión mínima. Por ello, si gestionas adecuadamente
                 tus redes sociales y/o página web los resultados económicos serán verán en el corto plazo y con márgenes de ganancia bastante amplios.</p>
         </div>
-        <a href="blog2.php"><button>SIGUIENTE BLOG</button></a>
+        <div class="contenedor-pagination">
+         <ul class="pagination">
+            <li class="page-item">
+                <a class="page-link" href="blog3.php">Anterior</a>
+            </li>
+            <li class="page-item active">
+                <a class="page-link uno" href="blog1.php">1</a>
+            </li>
+            <li class="page-item">
+                <a class="page-link" href="blog2.php">2</a>
+            </li>
+            <li class="page-item">
+                <a class="page-link" href="blog3.php">3</a>
+            </li>
+            <li class="page-item">
+                <a class="page-link" href="blog2.php">Siguiente</a>
+            </li>
+        </ul>
+        </div>
     </main>
     <?php include_once "../footer.php"; ?>
     <script src="https://kit.fontawesome.com/022b0abea9.js" crossorigin="anonymous"></script>

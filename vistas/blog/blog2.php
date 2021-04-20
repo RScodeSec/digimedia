@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../../src/style/blogs.css">
     <link rel="stylesheet" href="../../src/style/partials/footer.css">
     <link rel="stylesheet" href="../../src/style/partials/navbar.css">
+    <link rel="stylesheet" href="../../src/style/paginacion.css">
 </head>
 
 <body>
@@ -49,7 +50,25 @@
             <p>Hazlo de manera constante, no dejes mensajes o comentarios sin respuesta, ya que tu público puede sentirse decepcionado y buscar otras alternativas en internet. Además, es importante saber qué es lo que piensan tus clientes actuales y potenciales
                 para producir contenido en redes sociales que aclare sus dudas y, sobre todo, para conocer sus opiniones con el fin seguir mejorando el desempeño de tu empresa o emprendimiento.</p>
         </div>
-        <a href="blog1.php"><button>SIGUIENTE BLOG</button></a>
+        <div class="contenedor-pagination">
+         <ul class="pagination">
+            <li class="page-item">
+                <a class="page-link" href="blog1.php">Anterior</a>
+            </li>
+            <li class="page-item">
+                <a class="page-link" href="blog1.php">1</a>
+            </li>
+            <li class="page-item active">
+                <a class="page-link" href="blog2.php">2</a>
+            </li>
+            <li class="page-item">
+                <a class="page-link" href="blog3.php">3</a>
+            </li>
+            <li class="page-item">
+                <a class="page-link" href="blog3.php">Siguiente</a>
+            </li>
+        </ul>
+        </div>
     </main>
     <?php include_once "../footer.php"; ?>
     <script src="https://kit.fontawesome.com/022b0abea9.js" crossorigin="anonymous"></script>
